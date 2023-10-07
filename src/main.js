@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 
 import "normalize.css";
-import "./assets/css/index.less";
+import "./assets/css/index.js";
 
 import router from "./router";
 import pinia from "./stores";
