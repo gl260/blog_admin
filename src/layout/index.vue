@@ -6,7 +6,9 @@
     </div>
     <div class="layout-content-wrap">
       <div class="sidebar-wrap">二级路由</div>
-      <div class="layout-container"><router-view /></div>
+      <div class="layout-container">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
