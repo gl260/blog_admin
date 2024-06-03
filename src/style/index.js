@@ -1,4 +1,3 @@
 import "normalize.css";
-import "./reset.css";
-import "./common.css";
+import "./common.scss";
 import "../font/iconfont.css";
