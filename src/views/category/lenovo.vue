@@ -1,6 +1,6 @@
 <template>
-  <div class="404">
-    <h2>404</h2>
+  <div class="lenovo">
+    <h2>拯救者</h2>
   </div>
 </template>
 

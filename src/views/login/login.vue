@@ -3,10 +3,10 @@
     <div class="container" ref="containerRef">
       <transition name="image" mode="out-in">
         <template v-if="flag">
-          <img class="login-image image" src="@/assets/img/login/login.jpg" alt="登录" />
+          <img class="login-image image" src="@/assets/login.jpg" alt="登录" />
         </template>
         <template v-else>
-          <img class="register-image image" src="@/assets/img/login/register.jpg" alt="注册" />
+          <img class="register-image image" src="@/assets/register.jpg" alt="注册" />
         </template>
       </transition>
 
@@ -14,9 +14,7 @@
       <div class="login-box" ref="boxRef">
         <div class="top-tips">
           <span class="text">SING JUMP RAP</span>
-          <span class="top-tips-btn" type="primary" @click="changeBtn" ref="changeBtnRef">
-            注册
-          </span>
+          <span class="top-tips-btn" type="primary" @click="changeBtn" ref="changeBtnRef"> 注册 </span>
         </div>
         <h1 class="h1-text" ref="h1Ref">登录</h1>
         <div class="other-login">
@@ -46,8 +44,8 @@ const boxRef = ref();
 const changeBtnRef = ref();
 
 // onMounted(() => {
-  // console.log(h1Ref.value.innerHTML);
-  // changeBtnRef.value.style.color = "red";
+// console.log(h1Ref.value.innerHTML);
+// changeBtnRef.value.style.color = "red";
 // });
 
 const changeBtn = () => {
@@ -73,7 +71,7 @@ const changeBtn = () => {
 // const { counter } = storeToRefs(loginStore);
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .login {
   display: flex;
   justify-content: center;

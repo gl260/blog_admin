@@ -28,7 +28,7 @@
 
 <script setup></script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .register-form {
   .text-tips {
     color: rgb(123, 122, 123);

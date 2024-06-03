@@ -1,6 +1,6 @@
 <template>
-  <div class="404">
-    <h2>404</h2>
+  <div class="amd">
+    <h2>amd</h2>
   </div>
 </template>
 

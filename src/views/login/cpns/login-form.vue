@@ -22,7 +22,7 @@
 
 <script setup></script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .login-form {
   .text-tips {
     color: rgb(123, 122, 123);

@@ -1,6 +1,6 @@
 <template>
-  <div class="404">
-    <h2>404</h2>
+  <div class="asus">
+    <h2>华硕</h2>
   </div>
 </template>
 
