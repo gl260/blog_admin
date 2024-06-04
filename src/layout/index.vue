@@ -19,11 +19,6 @@
 <script setup>
 import layoutHeader from "./components/header.vue";
 import layoutMenus from "./components/menus.vue";
-
-import useMenuStore from "@/stores/menu";
-const useMenu = useMenuStore();
-
-// console.log("sidebar", aa, useMenu.sidebar);
 </script>
 
 <style lang="scss" scoped>

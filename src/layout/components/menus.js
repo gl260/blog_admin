@@ -1,12 +1,12 @@
 const menus = [
   {
     title: "首页",
-    icon: "",
+    icon: "icon-home",
     path: "/",
   },
   {
     title: "类别", //网络
-    icon: "",
+    icon: "icon-type",
     child: [
       {
         title: "华硕",
@@ -22,7 +22,7 @@ const menus = [
   },
   {
     title: "CPU",
-    icon: "",
+    icon: "icon-cpu",
     child: [
       {
         title: "AMD",

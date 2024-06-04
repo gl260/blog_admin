@@ -1,7 +1,5 @@
 import { createRouter, createWebHashHistory, useRouter } from "vue-router";
 import pinia from "../stores/index";
-import useMenuStore from "../stores/menu";
-const useMenu = useMenuStore(pinia);
 
 const async_routers = [
   {

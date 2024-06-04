@@ -1,7 +1,7 @@
 <template>
   <div class="layout-menus">
-    <el-menu default-active="1" unique-opened>
-      <el-menu-item index="1" @click="goBack('/')">
+    <el-menu :default-active="menuActive" background-color="transparent" unique-opened>
+      <!-- <el-menu-item index="1" @click="goBack('/')">
         <i class="i-menu-icon iconfont icon-home"></i>
         <span>首页</span>
       </el-menu-item>
@@ -20,36 +20,76 @@
         </template>
         <el-menu-item index="3-1">AMD</el-menu-item>
         <el-menu-item index="3-2">Intel</el-menu-item>
-      </el-sub-menu>
+      </el-sub-menu> -->
+      <template v-for="(item, index) in mapMenuTree">
+        <template v-if="item.child && item.child.length">
+          <el-sub-menu :key="index" :index="index">
+            <template #title>
+              <i class="i-menu-icon iconfont" :class="item.icon"></i>
+              <span>{{ item.title }}</span>
+            </template>
+            <template v-for="(v, i) in item.child">
+              <el-menu-item :index="`${index}-${i}`" @click="goBack(v.path, `${index}-${i}`)">{{ v.title }}</el-menu-item>
+            </template>
+          </el-sub-menu>
+        </template>
+        <template v-else>
+          <el-menu-item :key="index" :index="index" @click="goBack(item.path, index)">
+            <i class="i-menu-icon iconfont" :class="item.icon"></i>
+            <span>{{ item.title }}</span>
+          </el-menu-item>
+        </template>
+      </template>
     </el-menu>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import { storeToRefs } from "pinia";
+import { storage } from "@/utils/index.js";
 import { useRouter } from "vue-router";
 import menus from "./menus";
-import useMenuStore from "@/stores/menu";
-const useMenu = useMenuStore();
+import useMainStore from "@/stores/main.js";
+const useMain = useMainStore();
+const { menuActive } = storeToRefs(useMain);
+console.log("menuActive", menuActive);
 
-// console.log("sidebar", aa, useMenu.sidebar);
-
-const item = ref(menus);
-
-const recursion = () => {
-  const arr = [];
-};
-const mapNewMenus = () => {};
-console.log("item", item.value);
+const mapMenuTree = ref(menus);
 
 // 路由跳转
 const router = useRouter();
-const goBack = (path) => {
+const goBack = (path, idx) => {
+  console.log(idx);
+  storage("menuActive", idx);
   router.push(path);
 };
 </script>
 
 <style lang="scss" scoped>
+.layout-menus {
+  height: 100%;
+  background-image: linear-gradient(#7960eb, #ba9aca);
+  overflow: auto;
+  .el-menu {
+    border-right: none;
+    li {
+      color: #fff;
+    }
+  }
+  :deep(.el-sub-menu__title) {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.35) !important;
+    }
+    color: #fff;
+  }
+  :deep(.el-menu-item:hover) {
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+  .el-menu-item.is-active {
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+}
 .i-menu-icon {
   margin-right: 16px;
   display: inline-block;
