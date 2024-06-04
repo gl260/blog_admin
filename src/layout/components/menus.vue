@@ -70,6 +70,7 @@ const goBack = (path, idx) => {
 .layout-menus {
   height: 100%;
   background-image: linear-gradient(#7960eb, #ba9aca);
+  box-shadow: inset 0px 5px 12px 0px rgba(0, 0, 0, 0.2);
   overflow: auto;
   .el-menu {
     border-right: none;

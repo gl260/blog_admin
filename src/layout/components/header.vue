@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--primary);
+    background: #7960eb;
   }
   .layout-header-content {
     flex: 1;

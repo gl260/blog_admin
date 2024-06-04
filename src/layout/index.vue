@@ -31,4 +31,8 @@ import layoutMenus from "./components/menus.vue";
 .el-header {
   --el-header-padding: 0;
 }
+.el-main {
+  --el-main-padding: 16px;
+  box-shadow: inset 0px 5px 12px 0px rgba(0, 0, 0, 0.2);
+}
 </style>
