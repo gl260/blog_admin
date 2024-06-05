@@ -17,3 +17,15 @@ export function storage() {
     }
   }
 }
+
+export const supportLanguages = ["zh", "en", "ja"];
+
+// 检测浏览器语言
+export function getBrowserLang() {
+  /*  zh:中文 en:英语 ja: 日语 */
+  const broserLang = navigator.language || navigator["systemLanguage"] || navigator["browserLanguage"] || "en";
+  const lang = broserLang.split("-")[0].toLowerCase();
+  const has = supportLanguages.some((v) => lang.includes(v));
+
+  return has ? lang : "en";
+}
