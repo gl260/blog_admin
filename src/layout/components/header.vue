@@ -47,4 +47,7 @@ import LayoutLanguage from "./language.vue";
   color: #606266;
   border-radius: 50%;
 }
+.el-tooltip__trigger {
+  outline: none;
+}
 </style>
