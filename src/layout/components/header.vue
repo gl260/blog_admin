@@ -2,6 +2,7 @@
   <div class="layout-header">
     <div class="layout-header-logo">logo</div>
     <div class="layout-header-content">
+      <layout-dark />
       <layout-language />
       <layout-user />
     </div>
@@ -11,6 +12,7 @@
 <script setup>
 import LayoutUser from "./user.vue";
 import LayoutLanguage from "./language.vue";
+import LayoutDark from "./dark.vue";
 </script>
 
 <style lang="scss" scoped>

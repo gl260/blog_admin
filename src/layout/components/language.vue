@@ -16,4 +16,8 @@ const command = (v) => {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.icon-duoyuyan {
+  color: #c1baf5;
+}
+</style>

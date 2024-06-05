@@ -37,3 +37,18 @@ a {
 img {
   vertical-align: top;
 }
+
+html.dark {
+  color-scheme: dark;
+  .layout-header-logo {
+    background: #121212 !important;
+    border-bottom: 1px solid #4a4b4d;
+  }
+  .layout-header-content {
+    border-bottom: 1px solid #4a4b4d;
+  }
+  .layout-menus {
+    background: #121212;
+    border-right: 1px solid #4a4b4d;
+  }
+}
